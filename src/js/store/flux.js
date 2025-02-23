@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -12,17 +14,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			contactos: [],
+
+			newcontact: false
+
 		},
+
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
 			},
 			changeColor: (index, color) => {
 				//get the store
@@ -37,7 +42,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			getContactos: () => {
+				fetch("https://playground.4geeks.com/contact/agendas/LeonardoContacto")
+					.then(response => response.json())
+					.then(response => setStore({ "contactos": response.contacts }))
+			},
+
+			actualizador: () =>{
+				setStore({newcontact:(prev => !prev)})
 			}
+
+
 		}
 	};
 };

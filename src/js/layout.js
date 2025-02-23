@@ -2,13 +2,15 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { AddContacts, Home } from "./views/addContacts";
+import { Contactos } from "./views/contactos";
+import { EditContacts, Single } from "./views/editContacts";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Formulario from "./component/formulario";
+import { EliminarContacto } from "./views/eliminarContacto";
 
 //create your first component
 const Layout = () => {
@@ -20,11 +22,11 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/" element={<Contactos />} />
+						<Route path="/AddContacts" element={<AddContacts />} />
+						<Route path="/EliminarContacto/:id" element={<EliminarContacto />} />
+						<Route path="/EditContacts/:contacto" element={<EditContacts />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
