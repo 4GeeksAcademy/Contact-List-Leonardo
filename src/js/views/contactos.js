@@ -23,7 +23,7 @@ export const Contactos = () => {
       <Navbar titulo="Lista de contactos" />
       <div className="container">
         <div className="d-flex justify-content-end">
-          <Boton direccion={"/AddContacts"} contenido={"➕"} />
+          <Boton direccion={"/AddContacts"} contenido={"Añadir"} />
         </div>
         {contactos.length > 0 ? (
           contactos.map((element) => {
@@ -35,7 +35,7 @@ export const Contactos = () => {
           })) : (
           (
             <div className="sinContactos">
-              <p>No tienes contactos, añade uno nuevo en el +</p>
+              <p>No tienes contactos, añade uno nuevo en el boton Añadir</p>
             </div>
           )
 
