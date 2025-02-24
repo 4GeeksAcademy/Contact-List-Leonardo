@@ -1,3 +1,59 @@
-/* 
-    General Styles
-*/
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+/* Estilos generales */
+body {
+    background-color: #1c1c1c;
+    color: #ffd200;
+    
+        font-family: "Zen Dots", serif;
+        font-weight: 400;
+        font-style: normal;
+      
+}
+
+.navbar {
+    border-bottom: 2px solid #ffd200; /* Bordes amarillos */
+}
+
+.sinContactos {
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffd200; /* Letras amarillas */
+}
+
+a {
+    text-decoration: none;
+    color: #ffd200; /* Texto amarillo */
+}
+
+a:hover {
+    color: #ffd200; /* Hover en amarillo */
+}
+
+.card {
+    font-weight: bold;
+    color: #ffd200; /* Texto amarillo */
+    background-color: #1c1c1c; /* Fondo negro */
+    border: 2px solid #ffd200; /* Borde amarillo */
+}
+
+.botoncin {
+    background-color: #ffd200;
+    color: #1c1c1c;
+}
+
+.botoncin:hover {
+    background-color: #1c1c1c;
+    color: #ffd200;
+    border: 2px solid rgb(255, 255, 255); /* Borde amarillo */
+}
+
+.formulario {
+    border: 5px solid #ffd200; /* Borde amarillo */
+    margin: auto;
+    background-color: #1c1c1c; /* Fondo negro */
+    color: #ffd200; /* Letras amarillas */
+}

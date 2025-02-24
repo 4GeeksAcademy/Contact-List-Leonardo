@@ -31,6 +31,14 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
+			fetch("https://playground.4geeks.com/contact/agendas/LeonardoContacto", {
+				headers: {
+				  accept: "application/json",
+				  "Content-type": "application/json",
+				},
+				method: "POST"
+			})
+			state.actions.getContactos()
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,
